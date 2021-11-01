@@ -32,3 +32,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### PROJECT SCOPE
+Develop the 'full homepage' you see using 
+- TailwindCSS
+- Next.js
+- Vercel
+- Prismic (Headless CMS).
+
+#### Additional Information:
+Here is the CSS URL for Gotham:
+https://cloud.typography.com/6929016/6791232/css/fonts.css
+
+Here is the JS URL for FontAwesome:
+https://kit.fontawesome.com/117bcfe378.js
+
+NB: Please complete by November 5th by 11am EST.
+
+### MOCKUPS
+https://www.figma.com/file/oLfcvrrm9KnZFygdhlnJQL/PicLab-Design?node-id=0%3A1
