@@ -1,6 +1,6 @@
 module.exports = {
-  // Use only the tailwind styles used in the application.
-  purge: { enabled: true, content: ['.pages/**/*.js'] },
+  mode: 'jit',
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -9,4 +9,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+}
