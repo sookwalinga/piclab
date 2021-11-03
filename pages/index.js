@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 // FontAwesome Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
             <div className='border-l-2  border-black-500 h-20 w-72 text-sm'>
               {' '}
               <div className='ml-8'>
-                <span className='font-bold'>Organize, transform, & serve</span>{' '}
+                <span className='font-bold'>Organize, transform, & serve</span>
                 your entire photo library. The perfect image management app for
                 freelancers, organizations & web developers.
               </div>
@@ -51,21 +51,24 @@ export default function Home() {
           />
         </div>
         <div className='fixed bottom-0 mb-2 bg-white rounded-lg justify-evenly flex w-full p-2'>
-          <div className='text-black'>
+          <div className='text-black pr-56'>
             <form
               action='
           #'
               method='post'
             >
-              <div>
+              <div className='flex border-2 rounded-lg px-6'>
+                <input
+                  type='email'
+                  name='client-email'
+                  id='client-email'
+                  className='p-2'
+                  placeholder='Enter email'
+                />
 
-              <input
-                type='email'
-                name='client-email'
-                id='client-email'
-                className='py-2'
-                placeholder='Enter email'
-              />
+                <span className='whitespace-nowrap pt-2 text-pink-600'>
+                  | <span className='pl-8'> Request Beta</span>
+                </span>
               </div>
             </form>
           </div>
@@ -76,11 +79,16 @@ export default function Home() {
               // layout='fill'
               width={10}
               height={20}
-              
             />
             <h1 className='pl-2 pt-2'>PICLAB</h1>
           </div>
-          <div></div>
+          <button
+            type='submit'
+            className='text-pink-600 mr-10 whitespace-nowrap'
+          >
+            <FontAwesomeIcon icon={faSignInAlt} size='lg' />
+            <span className='pl-2'> Sign In</span>
+          </button>
         </div>
       </main>
 

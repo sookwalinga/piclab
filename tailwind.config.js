@@ -4,15 +4,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
-    gradientColorStops: theme => ({
+    gradientColorStops: (theme) => ({
       ...theme('colors'),
-      'primary': '#FF75B7',
-      'secondary': '#E14551',
-      'danger': '#e3342f',
-     })
+      primary: '#FF75B7',
+      secondary: '#E14551',
+      danger: '#e3342f',
+    }),
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
