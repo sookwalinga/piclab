@@ -64,6 +64,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="static left-20">
           <span className='absolute top-28 right-0'>
             <Image
               src='/footer-bg.png'
@@ -142,7 +143,8 @@ export default function Home() {
             >
               <span className='pr-2 text-gray-400'>#</span> Desk
             </button>
-          </span>
+            </span>
+            </div>
 
           {/* REQUEST BETA FIXED FORM */}
           <div className='fixed bottom-0  mb-2 bg-white rounded-lg justify-evenly flex w-full p-2 z-30'>
