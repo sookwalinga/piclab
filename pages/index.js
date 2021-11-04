@@ -1,5 +1,9 @@
+import * as prismic from '@prismicio/client';
+import { RichText } from 'prismic-reactjs';
+
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +14,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
-export default function Home() {
+
+export default function Home({ homepage }) {
   var carouselSettings = {
     arrows: false,
     infinite: true,
@@ -21,7 +26,7 @@ export default function Home() {
     pauseOnHover: true,
   };
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-gradient-to-r from-primary via-blue-900 to-secondary font-Inter text-white overflow-hidden'>
+    <div className='flex flex-col items-center justify-center min-h-screen font-Inter text-white overflow-hidden'>
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
@@ -32,7 +37,7 @@ export default function Home() {
       </Head>
 
       {/* HERO SECTION */}
-      <main className='flex flex-col  w-full'>
+      <main className='flex flex-col  w-full bg-gradient-to-r from-primary via-blue-900 to-secondary'>
         <div className='flex flex-row  w-full'>
           <div className='flex-2 px-20 pt-20'>
             <div className='flex flex-row  w-full pb-36 '>
@@ -64,85 +69,87 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <span className='absolute top-28 right-0'>
-            <Image
-              src='/footer-bg.png'
-              alt='image'
-              height={700}
-              width={810}
-              className='drop-shadow-2xl'
-            />
-          </span>
+          <div className='static left-20'>
+            <span className='absolute top-28 right-0'>
+              <Image
+                src='/footer-bg.png'
+                alt='image'
+                height={700}
+                width={810}
+                className='drop-shadow-2xl'
+              />
+            </span>
 
-          <span className='absolute top-10 right-0'>
-            <Image
-              src='/apple-mac.png'
-              alt='image'
-              height={800}
-              width={1000}
-              className='drop-shadow-2xl'
-            />
-          </span>
-          <span className='absolute top-10 right-96'>
-            <Image
-              src='/hero1.png'
-              alt='image'
-              height={250}
-              width={300}
-              className='drop-shadow-2xl'
-            />
-          </span>
-          <span className='absolute top-16 right-96 mr-56 mt-10'>
-            <button
-              disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400'
-            >
-              <span className='pr-2 text-gray-400'>#</span> Person
-            </button>
-          </span>
-          <span className='absolute top-16 right-0 mt-10'>
-            <button
-              disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
-            >
-              <span className='pr-2 text-gray-400'>#</span> Pencils
-            </button>
-          </span>
-          <span className='absolute top-36 right-72'>
-            <Image
-              src='/hero2.png'
-              alt='image'
-              height={200}
-              width={240}
-              className='drop-shadow-2xl'
-            />
-          </span>
-          <span className='absolute top-96 right-96  mt-20'>
-            <button
-              disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900'
-            >
-              <span className='pr-2 text-gray-400'>#</span> Water
-            </button>
-          </span>
-          <span className='absolute top-96 left-96 ml-10 mt-20'>
-            <Image
-              src='/hero3.png'
-              alt='image'
-              height={200}
-              width={240}
-              className='drop-shadow-2xl'
-            />
-          </span>
+            <span className='absolute top-10 right-0'>
+              <Image
+                src='/apple-mac.png'
+                alt='image'
+                height={800}
+                width={1000}
+                className='drop-shadow-2xl'
+              />
+            </span>
+            <span className='absolute top-10 right-96'>
+              <Image
+                src='/hero1.png'
+                alt='image'
+                height={250}
+                width={300}
+                className='drop-shadow-2xl'
+              />
+            </span>
+            <span className='absolute top-16 right-96 mr-56 mt-10'>
+              <button
+                disabled='disabled'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400'
+              >
+                <span className='pr-2 text-gray-400'>#</span> Person
+              </button>
+            </span>
+            <span className='absolute top-16 right-0 mt-10'>
+              <button
+                disabled='disabled'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+              >
+                <span className='pr-2 text-gray-400'>#</span> Pencils
+              </button>
+            </span>
+            <span className='absolute top-36 right-72'>
+              <Image
+                src='/hero2.png'
+                alt='image'
+                height={200}
+                width={240}
+                className='drop-shadow-2xl'
+              />
+            </span>
+            <span className='absolute top-96 right-96  mt-20'>
+              <button
+                disabled='disabled'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900'
+              >
+                <span className='pr-2 text-gray-400'>#</span> Water
+              </button>
+            </span>
+            <span className='absolute top-96 left-96 ml-10 mt-20'>
+              <Image
+                src='/hero3.png'
+                alt='image'
+                height={200}
+                width={240}
+                className='drop-shadow-2xl'
+              />
+            </span>
 
-          <span className='absolute top-96 mt-24 md:ml-48 md:left-96 '>
-            <button
-              disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600'
-            >
-              <span className='pr-2 text-gray-400'>#</span> Desk
-            </button>
-          </span>
+            <span className='absolute top-96 mt-24 md:ml-48 md:left-96 '>
+              <button
+                disabled='disabled'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600'
+              >
+                <span className='pr-2 text-gray-400'>#</span> Desk
+              </button>
+            </span>
+          </div>
 
           {/* REQUEST BETA FIXED FORM */}
           <div className='fixed bottom-0  mb-2 bg-white rounded-lg justify-evenly flex w-full p-2 z-30'>
@@ -401,26 +408,30 @@ export default function Home() {
             layout='fill'
             objectFit='cover'
           />
-          <div className='ml-20'>
+          <div className='ml-10 px-44'>
             <h1 className='my-20 text-3xl'>
               <span className=' font-bold pr-2'>News</span>lorem at PicLab
             </h1>
 
             <div className='flex'>
-              <p className='text-gray-400 mr-10'>JUL 18, 2021</p>
+              <p className='text-gray-400 mr-10'>
+                {RichText.asText(homepage.data.newsdate1)}
+              </p>
               <div className='no-flex'>
-                <p className='underline'>PicLab generates $1 billion </p>
-                <p className='underline'> in revenue.</p>
+                <Link href='#' >
+                  <a className='underline'>{RichText.asText(homepage.data.news1)}</a>
+                </Link>
               </div>
             </div>
-            {/* <div className="border w-40 h-0 my-10 bg-gradient-to-r from-black to-blue-900"></div> */}
             <hr className='w-100 h-0 my-10 bg-gray-400' />
             <div className='flex'>
-              <p className='text-gray-400 mr-10'>JUL 23, 2021</p>
+            <p className='text-gray-400 mr-14'>
+                {RichText.asText(homepage.data.newsdate2)}
+              </p>
               <div className='no-flex'>
-                <p className='underline'>PicLab generates an</p>
-                <p className='underline'>additional $2 billion in</p>
-                <p className='underline'> revenue.</p>
+              <Link href='#' >
+                  <a className='underline'>{RichText.asText(homepage.data.news2)}</a>
+                </Link>
               </div>
             </div>
           </div>
@@ -434,7 +445,7 @@ export default function Home() {
         </div>
 
         {/* SECTION FIVE - FOOTER */}
-        <footer className='relative h-96 py-96 '>
+        <div className='relative h-96 py-96 '>
           {/* Background Image. */}
           <Image
             src='/footer-bg.png'
@@ -473,15 +484,35 @@ export default function Home() {
                       type='submit'
                       className='whitespace-nowrap text-pink-600'
                     >
-                      | <span className='pl-8'> Request Beta</span>
+                      |<span className='pl-8'>Request Beta</span>
                     </button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-        </footer>
+        </div>
       </main>
+      <footer className='bg-gradient-to-r from-primary to-secondary h-72 w-full'></footer>
     </div>
   );
+}
+
+// CONFIGURATION FOR PRISMIC CMS.
+export async function getStaticProps() {
+  // API endpoint for the Prismic CMS repository.
+  const endpoint = prismic.getEndpoint('piclab-samo');
+
+  // Client used to fetch CMS content.
+  const client = prismic.createClient(endpoint);
+
+  // Page document for our homepage from the CMS.
+  const homepage = await client.getSingle('homepage', 'logo');
+
+  // Pass the homepage as prop to page.
+  return {
+    props: {
+      homepage,
+    },
+  };
 }
