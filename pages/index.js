@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs';
 
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +13,7 @@ import { faEnvelope, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+
 
 export default function Home({ homepage }) {
   var carouselSettings = {
@@ -406,25 +408,30 @@ export default function Home({ homepage }) {
             layout='fill'
             objectFit='cover'
           />
-          <div className='ml-20'>
+          <div className='ml-10 px-44'>
             <h1 className='my-20 text-3xl'>
               <span className=' font-bold pr-2'>News</span>lorem at PicLab
             </h1>
 
             <div className='flex'>
-              <p className='text-gray-400 mr-10'>JUL 18, 2021 {RichText.asText(homepage.data.news-date1)}</p>
+              <p className='text-gray-400 mr-10'>
+                {RichText.asText(homepage.data.newsdate1)}
+              </p>
               <div className='no-flex'>
-                <p className='underline'>PicLab generates $1 billion </p>
-                <p className='underline'> in revenue.</p>
+                <Link href='#' >
+                  <a className='underline'>{RichText.asText(homepage.data.news1)}</a>
+                </Link>
               </div>
             </div>
             <hr className='w-100 h-0 my-10 bg-gray-400' />
             <div className='flex'>
-              <p className='text-gray-400 mr-10'>JUL 23, 2021</p>
+            <p className='text-gray-400 mr-14'>
+                {RichText.asText(homepage.data.newsdate2)}
+              </p>
               <div className='no-flex'>
-                <p className='underline'>PicLab generates an</p>
-                <p className='underline'>additional $2 billion in</p>
-                <p className='underline'> revenue.</p>
+              <Link href='#' >
+                  <a className='underline'>{RichText.asText(homepage.data.news2)}</a>
+                </Link>
               </div>
             </div>
           </div>
@@ -477,10 +484,7 @@ export default function Home({ homepage }) {
                       type='submit'
                       className='whitespace-nowrap text-pink-600'
                     >
-                      |
-                      <span className='pl-8'>
-                        Request Beta
-                      </span>
+                      |<span className='pl-8'>Request Beta</span>
                     </button>
                   </div>
                 </form>
@@ -494,6 +498,7 @@ export default function Home({ homepage }) {
   );
 }
 
+// CONFIGURATION FOR PRISMIC CMS.
 export async function getStaticProps() {
   // API endpoint for the Prismic CMS repository.
   const endpoint = prismic.getEndpoint('piclab-samo');
