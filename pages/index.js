@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 // Carousel
 import 'slick-carousel/slick/slick.css';
@@ -12,11 +12,10 @@ import Slider from 'react-slick';
 
 export default function Home() {
   var carouselSettings = {
-    // dots: true,
     arrows: false,
     infinite: true,
     slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
@@ -26,10 +25,10 @@ export default function Home() {
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
-        <script
+        {/* <script
           type='text/javascript'
           src='https://kit.fontawesome.com/117bcfe378.js'
-        ></script>
+        ></script> */}
       </Head>
 
       {/* HERO SECTION */}
@@ -110,28 +109,27 @@ export default function Home() {
               type='submit'
               className='text-pink-600 mr-10 whitespace-nowrap'
             >
-              {/* <FontAwesomeIcon icon={faSignInAlt} size='lg' /> */}
-              <i className='fal fa-sign-in'></i>
+              <FontAwesomeIcon icon={faSignInAlt} size='lg' />
               <span className='pl-2'> Sign In</span>
             </button>
           </div>
         </div>
 
-        {/* SECTION TWO */}
+        {/* SECTION TWO - A.I.*/}
         <div className='flex flex-row  w-full bg-gradient-to-r from-black to-blue-900 pt-20'>
           <img
             className='w-screen shadow rounded max-w-20 h-screen align-middle border-none pr-72'
             src='/asset2.png'
             alt='image'
           />
-          <div className='sticky bottom-0 right-20 mb-0 bg-white rounded-lg justify-evenly pr-10 pl-10 pt-8'>
+          <div className='sticky right-20 mb-0 bg-white rounded-lg justify-evenly pr-10 pl-10 pt-8 mb-28'>
             <div>
               <p className='text-gray-400 whitespace-nowrap '>
                 Artificial Intelligence
               </p>
             </div>
-            <div className='text-4xl font-medium'>
-              <p className='text-gray-600 whitespace-nowrap pt-10 '>
+            <div className='text-3xl font-medium'>
+              <p className='text-gray-600 whitespace-nowrap pt-8 '>
                 Let <span className='text-pink-600'>A.I.</span> handle lorem
               </p>
               <p className='text-gray-600 whitespace-nowrap'>
@@ -139,12 +137,12 @@ export default function Home() {
               </p>
             </div>
             <img
-              className='w-36 shadow rounded h-auto align-middle border-none mx-auto my-20'
+              className='w-36 shadow rounded h-auto align-middle border-none mx-auto my-14'
               src='/ai.png'
               alt='image'
             />
 
-            <div className='text-2xl font-normal'>
+            <div className='text-xl font-normal'>
               <p className='text-gray-400 whitespace-nowrap'>
                 <span className='text-gray-600'> No more need to </span> lorem
                 ipsum dolor sit
@@ -170,11 +168,9 @@ export default function Home() {
           <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
             lorem ipsum for you.
           </h1>
-          <Slider
-            {...carouselSettings}
-            className='pt-10 px-10 mx-5 slick-slide'
-          >
-            <div className='bg-white rounded-lg px-2 pt-8'>
+          <Slider {...carouselSettings} className='pt-10 px-10 z-5 rounded-lg'>
+            {/* SLIDE 1 */}
+            <div className='bg-white rounded-lg px-2 pt-8 ml-2'>
               <div className='px-10'>
                 <p className='text-gray-400 whitespace-nowrap '>All-in-one</p>
               </div>
@@ -203,38 +199,41 @@ export default function Home() {
                 alt='image'
               />
             </div>
-            <div className='bg-white rounded-lg px-2 pt-8'>
+
+            {/* SLIDE 2 */}
+            <div className='bg-white rounded-lg px-2 pt-8 ml-8'>
               <div className='px-10'>
-                <p className='text-gray-400 whitespace-nowrap '>All-in-one</p>
+                <p className='text-gray-400 whitespace-nowrap '>Organization</p>
               </div>
               <div className='text-2xl font-medium py-5 px-10'>
                 <p className='text-gray-600'>
-                  Lorem <span className='text-pink-600'>all of your file</span>
-                  management on PicLab ipsum.
+                  Lorem ipsum
+                  <span className='text-pink-600'>organizatioon</span>
+                  dor sit epsilon.
                 </p>
               </div>
 
               <div className='text-xl font-normal px-10 text-gray-400 pb-10'>
                 <p className='text-gray-400'>
-                  <span className='text-gray-600'> No more need to </span> lorem
-                  ipsum dolor sit amet,
+                  <span className='text-gray-600'> Easily organize </span> all
+                  of lorem dolor sit amet, consectetur
                 </p>
                 <p className='whitespace-nowrap'>
-                  consectetur adipiscing elit, sed do eiusmod tempor
+                  adipiscing elit, sed do eiusmod tempor incididunt ut
                 </p>
-                <p className='whitespace-nowrap'>
-                  incididunt ut labore et dolore magna.
-                </p>
+                <p className='whitespace-nowrap'>labore et dolore magna. </p>
               </div>
               <img
-                className='w-screen shadow rounded h-auto align-middle border-none px-0 mt-10 pb-2'
-                src='/carousel-image-1.png'
+                className='w-screen shadow rounded h-auto align-middle border-none px-0 mt-20 pb-1'
+                src='/carousel-image-2.png'
                 alt='image'
               />
             </div>
-            <div className='bg-white rounded-lg px-2 pt-8'>
+
+            {/* SLIDE 3 */}
+            <div className='bg-white rounded-lg px-2 pt-8 ml-20 '>
               <div className='px-10'>
-                <p className='text-gray-400 whitespace-nowrap '>All-in-one</p>
+                <p className='text-gray-400 whitespace-nowrap '>Lorem</p>
               </div>
               <div className='text-2xl font-medium py-5 px-10'>
                 <p className='text-gray-600'>
@@ -256,8 +255,8 @@ export default function Home() {
                 </p>
               </div>
               <img
-                className='w-screen shadow rounded h-auto align-middle border-none px-0 mt-10 pb-2'
-                src='/carousel-image-1.png'
+                className='w-auto shadow rounded h-auto align-middle border-none px-0 mt-20 pb-1.5'
+                src='/carousel-image-3.png'
                 alt='image'
               />
             </div>
@@ -265,12 +264,59 @@ export default function Home() {
         </div>
 
         {/* SECTION FOUR - NEWS */}
+        <div className='relative grid grid-cols-2 w-full bg-gradient-to-r from-black to-blue-900 py-40 -mt-28'>
+          {/* Background Image. */}
+          <Image
+            src='/asset3.png'
+            alt='Picture of the author'
+            layout='fill' // required
+            objectFit='cover' // change to suit your needs
+          />
+          <div className='ml-20'>
+            <h1 className='my-20 text-3xl'>
+              <span className=' font-bold pr-2'>News</span>lorem at PicLab
+            </h1>
+
+            <div className='flex'>
+              <p className='text-gray-400 mr-10'>JUL 18, 2021</p>
+              <div className='no-flex'>
+                <p className='underline'>PicLab generates $1 billion </p>
+                <p className='underline'> in revenue.</p>
+              </div>
+            </div>
+            {/* <div className="border w-40 h-0 my-10 bg-gradient-to-r from-black to-blue-900"></div> */}
+            <hr className='w-100 h-0 my-10 bg-gray-400' />
+            <div className='flex'>
+              <p className='text-gray-400 mr-10'>JUL 23, 2021</p>
+              <div className='no-flex'>
+                <p className='underline'>PicLab generates an</p>
+                <p className='underline'>additional $2 billion in</p>
+                <p className='underline'> revenue.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* PicLab logo. */}
+          <div className='flex ml-72 mt-20'>
+            <div className='sticky right-10 z-0  border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
+            <div className='sticky right-10 z-5  border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
+            <div className='sticky right-10 -z-5  border-8 w-0 h-64 mx-5 -mt-20 bg-white-100 z-2 '></div>
+          </div>
+        </div>
 
         {/* SECTION FIVE - WITH MODAL */}
+        {/* <div className='relative grid grid-cols-2 w-full bg-gradient-to-r from-black to-blue-900 py-40 -mt-28'>
+          {/* Background Image. */}
       </main>
 
-      <footer className='flex items-center justify-center w-full h-24 border-t'>
-        <h1>Footer</h1>
+      <footer>
+      <Image
+            src='/home-screen.png'
+            alt='Picture of the author'
+            layout='fill' // required
+            objectFit='cover' // change to suit your needs
+            className='w-screen h-auto' // just an example
+          />
       </footer>
     </div>
   );
