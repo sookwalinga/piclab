@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+// import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 // Carousel
 import 'slick-carousel/slick/slick.css';
@@ -26,8 +26,13 @@ export default function Home() {
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
+        <script
+          type='text/javascript'
+          src='https://kit.fontawesome.com/117bcfe378.js'
+        ></script>
       </Head>
 
+      {/* HERO SECTION */}
       <main className='flex flex-col  w-full'>
         <div className='flex flex-row  w-full'>
           <div className='flex-2 px-20 pt-20'>
@@ -67,6 +72,8 @@ export default function Home() {
               alt='image'
             />
           </div>
+
+          {/* REQUEST BETA FIXED FORM */}
           <div className='fixed bottom-0  mb-2 bg-white rounded-lg justify-evenly flex w-full p-2 z-10'>
             <div className='text-black pr-56'>
               <form
@@ -103,11 +110,14 @@ export default function Home() {
               type='submit'
               className='text-pink-600 mr-10 whitespace-nowrap'
             >
-              <FontAwesomeIcon icon={faSignInAlt} size='lg' />
+              {/* <FontAwesomeIcon icon={faSignInAlt} size='lg' /> */}
+              <i className='fal fa-sign-in'></i>
               <span className='pl-2'> Sign In</span>
             </button>
           </div>
         </div>
+
+        {/* SECTION TWO */}
         <div className='flex flex-row  w-full bg-gradient-to-r from-black to-blue-900 pt-20'>
           <img
             className='w-screen shadow rounded max-w-20 h-screen align-middle border-none pr-72'
@@ -151,6 +161,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* SECTION 3 WITH CAROUSEL*/}
         <div className='bg-gradient-to-r from-primary to-secondary px-8 pt-10 pb-10'>
           <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
             Why <span className='font-bold px-2'>PicLab</span> is the perfect
@@ -158,7 +170,10 @@ export default function Home() {
           <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
             lorem ipsum for you.
           </h1>
-          <Slider {...carouselSettings} className='pt-10 px-10 mx-5 slick-slide'>
+          <Slider
+            {...carouselSettings}
+            className='pt-10 px-10 mx-5 slick-slide'
+          >
             <div className='bg-white rounded-lg px-2 pt-8'>
               <div className='px-10'>
                 <p className='text-gray-400 whitespace-nowrap '>All-in-one</p>
@@ -248,6 +263,10 @@ export default function Home() {
             </div>
           </Slider>
         </div>
+
+        {/* SECTION FOUR - NEWS */}
+
+        {/* SECTION FIVE - WITH MODAL */}
       </main>
 
       <footer className='flex items-center justify-center w-full h-24 border-t'>
