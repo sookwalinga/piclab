@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 // Carousel
 import 'slick-carousel/slick/slick.css';
@@ -21,7 +21,7 @@ export default function Home() {
     pauseOnHover: true,
   };
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-gradient-to-r from-primary via-blue-900 to-secondary font-Inter text-white'>
+    <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-gradient-to-r from-primary via-blue-900 to-secondary font-Inter text-white overflow-hidden'>
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
@@ -64,23 +64,64 @@ export default function Home() {
               </div>
             </p>
           </div>
-          <div className='flex-3 pt-20'>
-            <img
-              className='w-screen shadow rounded max-w-full h-screen align-middle border-none'
-              src='/apple-macbook.png'
+          <span className='absolute top-28 right-0'>
+            <Image
+              src='/footer-bg.png'
               alt='image'
+              height={700}
+              width={810}
+              className='drop-shadow-2xl'
             />
-          </div>
+          </span>
+
+          <span className='absolute top-10 right-0'>
+            <Image
+              src='/apple-mac.png'
+              alt='image'
+              height={800}
+              width={1000}
+              className='drop-shadow-2xl'
+            />
+          </span>
+          <span className='absolute top-10 right-96'>
+            <Image
+              src='/hero1.png'
+              alt='image'
+              height={250}
+              width={300}
+              className='drop-shadow-2xl'
+            />
+          </span>
+          <span className='absolute top-36 right-72'>
+            <Image
+              src='/hero2.png'
+              alt='image'
+              height={200}
+              width={240}
+              className='drop-shadow-2xl'
+            />
+          </span>
+          <span className='absolute top-96 left-96 ml-10 mt-20'>
+            <Image
+              src='/hero3.png'
+              alt='image'
+              height={200}
+              width={240}
+              className='drop-shadow-2xl'
+            />
+          </span>
 
           {/* REQUEST BETA FIXED FORM */}
-          <div className='fixed bottom-0  mb-2 bg-white rounded-lg justify-evenly flex w-full p-2 z-10'>
+          <div className='fixed bottom-0  mb-2 bg-white rounded-lg justify-evenly flex w-full p-2 z-30'>
             <div className='text-black pr-56'>
-              <form
-                action='
-          #'
-                method='post'
-              >
+              <form action='#' method='post'>
                 <div className='flex border-2 rounded-lg px-6'>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size='lg'
+                    color='#d1d1d1'
+                    className='mt-2.5'
+                  />
                   <input
                     type='email'
                     name='client-email'
@@ -89,9 +130,12 @@ export default function Home() {
                     placeholder='Enter email'
                   />
 
-                  <span className='whitespace-nowrap pt-2 text-pink-600'>
+                  <button
+                    type='submit'
+                    className='whitespace-nowrap text-pink-600'
+                  >
                     | <span className='pl-8'> Request Beta</span>
-                  </span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -116,7 +160,7 @@ export default function Home() {
         </div>
 
         {/* SECTION TWO - A.I.*/}
-        <div className='flex flex-row  w-full bg-gradient-to-r from-black to-blue-900 pt-20'>
+        <div className='flex flex-row  w-full bg-gradient-to-r from-black to-blue-900 pt-20 mt-10 z-10'>
           <img
             className='w-screen shadow rounded max-w-20 h-screen align-middle border-none pr-72'
             src='/asset2.png'
@@ -314,33 +358,42 @@ export default function Home() {
             objectFit='cover'
           />
           <div className='relative z-2 bg-black h-96 py-96 -my-96 flex justify-center bg-opacity-80 mx-50'>
-            <div className="no-flex -mt-36">
-            <div className='text-2xl align-items-center'>
-            <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
-            Let's get started lorem
-          </h1>
-          <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
-            ipsum with<span className='font-bold px-2'>PicLab</span>
-          </h1>
-            </div>
-            <div className='text-black bg-white w-full mt-10 rounded'>
-              <form action='#' method='post'>
-                <div className='flex border-2 rounded-lg px-6'>
-                  <input
-                    type='email'
-                    name='client-email'
-                    id='client-email'
-                    className='p-2'
-                    placeholder='Enter email'
-                  />
+            <div className='no-flex -mt-36'>
+              <div className='text-2xl align-items-center'>
+                <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
+                  Let's get started lorem
+                </h1>
+                <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
+                  ipsum with<span className='font-bold px-2'>PicLab</span>
+                </h1>
+              </div>
+              <div className='text-black bg-white w-full mt-10 rounded'>
+                <form action='#' method='post'>
+                  <div className='flex border-2 rounded-lg px-6'>
+                    <FontAwesomeIcon
+                      icon={faEnvelope}
+                      size='lg'
+                      color='#d1d1d1'
+                      className='mt-2.5'
+                    />
+                    <input
+                      type='email'
+                      name='client-email'
+                      id='client-email'
+                      className='p-2'
+                      placeholder='Enter email'
+                    />
 
-                  <span className='whitespace-nowrap pt-2 text-pink-600'>
-                    | <span className='pl-8'> Request Beta</span>
-                  </span>
-                </div>
-              </form>
+                    <button
+                      type='submit'
+                      className='whitespace-nowrap text-pink-600'
+                    >
+                      | <span className='pl-8'> Request Beta</span>
+                    </button>
+                  </div>
+                </form>
               </div>
-              </div>
+            </div>
           </div>
         </footer>
       </main>
