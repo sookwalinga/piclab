@@ -52,7 +52,7 @@ export default function Home() {
             <p className='pt-6 text-3xl'>Powerful image</p>
             <p className='text-3xl font-bold'>asset management</p>
             <p className='text-3xl'>for everyone.</p>
-            <p className='pt-20 mr-8'>
+            <div className='pt-20 mr-8'>
               <div className='border-l-2  border-black-500 h-20 w-72 text-sm'>
                 <div className='ml-8'>
                   <span className='font-bold mr-1'>
@@ -62,7 +62,7 @@ export default function Home() {
                   for freelancers, organizations & web developers.
                 </div>
               </div>
-            </p>
+            </div>
           </div>
           <span className='absolute top-28 right-0'>
             <Image
@@ -92,6 +92,22 @@ export default function Home() {
               className='drop-shadow-2xl'
             />
           </span>
+          <span className='absolute top-16 right-96 mr-56 mt-10'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Person
+            </button>
+          </span>
+          <span className='absolute top-16 right-0 mt-10'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Pencils
+            </button>
+          </span>
           <span className='absolute top-36 right-72'>
             <Image
               src='/hero2.png'
@@ -101,6 +117,14 @@ export default function Home() {
               className='drop-shadow-2xl'
             />
           </span>
+          <span className='absolute top-96 right-96  mt-20'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Water
+            </button>
+          </span>
           <span className='absolute top-96 left-96 ml-10 mt-20'>
             <Image
               src='/hero3.png'
@@ -109,6 +133,15 @@ export default function Home() {
               width={240}
               className='drop-shadow-2xl'
             />
+          </span>
+
+          <span className='absolute top-96 mt-24 md:ml-48 md:left-96 '>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Desk
+            </button>
           </span>
 
           {/* REQUEST BETA FIXED FORM */}
@@ -139,7 +172,7 @@ export default function Home() {
                 </div>
               </form>
             </div>
-            <div className='flex flex-row  w-full text-black pl-10 '>
+            <div className='flex flex-row  w-full text-black pl-0 '>
               <Image
                 src='/logo-red.png'
                 alt='Logo'
@@ -160,13 +193,65 @@ export default function Home() {
         </div>
 
         {/* SECTION TWO - A.I.*/}
-        <div className='flex flex-row  w-full bg-gradient-to-r from-black to-blue-900 pt-20 mt-10 z-10'>
-          <img
-            className='w-screen shadow rounded max-w-20 h-screen align-middle border-none pr-72'
+        <div className='relative bg-gradient-to-r from-black to-blue-900 pt-26 mt-16 z-10 pl-96'>
+          {/* Background Image. */}
+          <Image
             src='/asset2.png'
-            alt='image'
+            alt='A.I image'
+            layout='fill'
+            objectFit='fill'
           />
-          <div className='sticky right-20 mb-0 bg-white rounded-lg justify-evenly pr-10 pl-10 pt-8 mb-28'>
+
+          <span className='absolute top-64 left-0'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Pencils
+            </button>
+          </span>
+          <span className='absolute top-52 left-72 '>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Person
+            </button>
+          </span>
+          <span className='absolute top-96 left-20 ml-28'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Desk
+            </button>
+          </span>
+          <span className='absolute top-96 left-96 ml-10'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Pencils
+            </button>
+          </span>
+          <span className='absolute top-96 left-20 mt-36'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Person
+            </button>
+          </span>
+          <span className='absolute top-96 left-96 mt-36 ml-36'>
+            <button
+              disabled='disabled'
+              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+            >
+              <span className='pr-2 text-gray-400'>#</span> Scenary
+            </button>
+          </span>
+
+          <div className='sticky my-20 bg-white rounded-lg  px-5 py-8 ml-96 w-96'>
             <div>
               <p className='text-gray-400 whitespace-nowrap '>
                 Artificial Intelligence
@@ -312,7 +397,7 @@ export default function Home() {
           {/* Background Image. */}
           <Image
             src='/asset3.png'
-            alt='Picture of the author'
+            alt='Background picture for news section.'
             layout='fill'
             objectFit='cover'
           />
@@ -342,9 +427,9 @@ export default function Home() {
 
           {/* PicLab logo. */}
           <div className='flex ml-72 mt-20'>
-            <div className='sticky right-10 z-0 border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
+            <div className='static right-10  border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
             <div className='sticky right-10 z-5 border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
-            <div className='sticky right-10 border-8 w-0 h-64 mx-5 -mt-20 bg-white-100'></div>
+            <div className='static right-10 border-8 w-0 h-64 mx-5 -mt-20 bg-white-100'></div>
           </div>
         </div>
 
@@ -353,7 +438,7 @@ export default function Home() {
           {/* Background Image. */}
           <Image
             src='/footer-bg.png'
-            alt='Picture of the author'
+            alt='Footer background image'
             layout='fill'
             objectFit='cover'
           />
