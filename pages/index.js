@@ -168,7 +168,7 @@ export default function Home() {
           <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
             lorem ipsum for you.
           </h1>
-          <Slider {...carouselSettings} className='pt-10 px-10 z-5 rounded-lg'>
+          <Slider {...carouselSettings} className='pt-10 px-10 z-10 rounded-lg'>
             {/* SLIDE 1 */}
             <div className='bg-white rounded-lg px-2 pt-8 ml-2'>
               <div className='px-10'>
@@ -264,13 +264,13 @@ export default function Home() {
         </div>
 
         {/* SECTION FOUR - NEWS */}
-        <div className='relative grid grid-cols-2 w-full bg-gradient-to-r from-black to-blue-900 py-40 -mt-28'>
+        <div className='relative grid grid-cols-2 w-full bg-gradient-to-r from-black to-blue-900 py-36 -mt-32'>
           {/* Background Image. */}
           <Image
             src='/asset3.png'
             alt='Picture of the author'
-            layout='fill' // required
-            objectFit='cover' // change to suit your needs
+            layout='fill'
+            objectFit='cover'
           />
           <div className='ml-20'>
             <h1 className='my-20 text-3xl'>
@@ -298,26 +298,52 @@ export default function Home() {
 
           {/* PicLab logo. */}
           <div className='flex ml-72 mt-20'>
-            <div className='sticky right-10 z-0  border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
-            <div className='sticky right-10 z-5  border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
-            <div className='sticky right-10 -z-5  border-8 w-0 h-64 mx-5 -mt-20 bg-white-100 z-2 '></div>
+            <div className='sticky right-10 z-0 border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
+            <div className='sticky right-10 z-5 border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
+            <div className='sticky right-10 border-8 w-0 h-64 mx-5 -mt-20 bg-white-100'></div>
           </div>
         </div>
 
-        {/* SECTION FIVE - WITH MODAL */}
-        {/* <div className='relative grid grid-cols-2 w-full bg-gradient-to-r from-black to-blue-900 py-40 -mt-28'>
+        {/* SECTION FIVE - FOOTER */}
+        <footer className='relative h-96 py-96 '>
           {/* Background Image. */}
-      </main>
-
-      <footer>
-      <Image
-            src='/home-screen.png'
+          <Image
+            src='/footer-bg.png'
             alt='Picture of the author'
-            layout='fill' // required
-            objectFit='cover' // change to suit your needs
-            className='w-screen h-auto' // just an example
+            layout='fill'
+            objectFit='cover'
           />
-      </footer>
+          <div className='relative z-2 bg-black h-96 py-96 -my-96 flex justify-center bg-opacity-80 mx-50'>
+            <div className="no-flex -mt-36">
+            <div className='text-2xl align-items-center'>
+            <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
+            Let's get started lorem
+          </h1>
+          <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
+            ipsum with<span className='font-bold px-2'>PicLab</span>
+          </h1>
+            </div>
+            <div className='text-black bg-white w-full mt-10 rounded'>
+              <form action='#' method='post'>
+                <div className='flex border-2 rounded-lg px-6'>
+                  <input
+                    type='email'
+                    name='client-email'
+                    id='client-email'
+                    className='p-2'
+                    placeholder='Enter email'
+                  />
+
+                  <span className='whitespace-nowrap pt-2 text-pink-600'>
+                    | <span className='pl-8'> Request Beta</span>
+                  </span>
+                </div>
+              </form>
+              </div>
+              </div>
+          </div>
+        </footer>
+      </main>
     </div>
   );
 }
