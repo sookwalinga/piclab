@@ -21,7 +21,7 @@ export default function Home() {
     pauseOnHover: true,
   };
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-gradient-to-r from-primary via-blue-900 to-secondary font-Inter text-white overflow-hidden'>
+    <div className='flex flex-col items-center justify-center min-h-screen font-Inter text-white overflow-hidden'>
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
@@ -32,7 +32,7 @@ export default function Home() {
       </Head>
 
       {/* HERO SECTION */}
-      <main className='flex flex-col  w-full'>
+      <main className='flex flex-col  w-full bg-gradient-to-r from-primary via-blue-900 to-secondary'>
         <div className='flex flex-row  w-full'>
           <div className='flex-2 px-20 pt-20'>
             <div className='flex flex-row  w-full pb-36 '>
@@ -434,7 +434,7 @@ export default function Home() {
         </div>
 
         {/* SECTION FIVE - FOOTER */}
-        <footer className='relative h-96 py-96 '>
+        <div className='relative h-96 py-96 '>
           {/* Background Image. */}
           <Image
             src='/footer-bg.png'
@@ -480,8 +480,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </footer>
+        </div>
       </main>
+      <footer className='bg-gradient-to-r from-primary to-secondary h-72 w-full'></footer>
     </div>
   );
 }
