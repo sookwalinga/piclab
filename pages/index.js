@@ -26,7 +26,8 @@ export default function Home({ homepage }) {
     pauseOnHover: true,
   };
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen font-Inter text-white overflow-hidden'>
+    // <div className='flex flex-col items-center justify-center min-h-screen font-Inter text-white overflow-hidden'>
+    <div className='font-Inter text-white'>
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
@@ -44,7 +45,6 @@ export default function Home({ homepage }) {
               <Image
                 src='/logo.png'
                 alt='Logo'
-                // layout='fill'
                 width={20}
                 height={40}
               />
