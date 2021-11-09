@@ -132,7 +132,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-16 sm:right-36 sm:mt-10 right-0 -mt-10'>
+            <span className='absolute sm:top-16 sm:right-36 sm:mt-10 right-0 -mt-20'>
               <button
                 disabled='disabled'
                 className='border py-0.5 px-3 border-white rounded-full bg-gray-800 text-xs'
@@ -140,7 +140,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Pencils
               </button>
             </span>
-            <span className='absolute sm:top-44 right-0 mt-10'>
+            <span className='absolute sm:top-44 right-0 mt-0'>
               <button
                 disabled='disabled'
                 className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
