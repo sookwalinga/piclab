@@ -90,12 +90,12 @@ export default function Home({ homepage }) {
               <Image
                 src='/hero1.png'
                 alt='image'
-                height={160}
-                width={200}
+                height={220}
+                width={260}
                 className='drop-shadow-2xl'
               />
             </span>
-            <span className='absolute sm:top-16 sm:right-96 mr-10 sm:mt-10 -mt-10'>
+            <span className='absolute sm:top-20 sm:right-96 mr-20 sm:mt-10 -mt-10'>
               <button
                 disabled='disabled'
                 className='border-2 py-1 px-2 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400 text-xs'
@@ -103,7 +103,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-16 sm:right-44 sm:mt-10 right-0 -mt-10'>
+            <span className='absolute sm:top-16 sm:right-36 sm:mt-10 right-0 -mt-10'>
               <button
                 disabled='disabled'
                 className='border-2 py-1 px-3 border-white rounded-full bg-gray-800 text-xs'
@@ -111,7 +111,7 @@ export default function Home({ homepage }) {
                 <span className='pr-2 text-gray-400'>#</span> Pencils
               </button>
             </span>
-            <span className='absolute sm:top-32 sm:right-56 sm:mt-0 top-96 right-8 mt-28 '>
+            <span className='absolute sm:top-40 sm:right-56 sm:mt-0 top-96 right-8 mt-28 '>
               <Image
                 src='/hero2.png'
                 alt='image'
@@ -188,82 +188,74 @@ export default function Home({ homepage }) {
             <h1 className='pl-2 pt-2'>PICLAB</h1>
           </div>
           <div className='pt-2 justify-self-end mr-5'>
-            <button
-              type='submit'
-              className='text-pink-600 whitespace-nowrap'
-            >
+            <button type='submit' className='text-pink-600 whitespace-nowrap'>
               <FontAwesomeIcon icon={faSignInAlt} size='lg' />
               <span className='pl-2 text-sm'> Sign In</span>
             </button>
           </div>
         </div>
 
-                {/* SECTION TWO - A.I.*/}
-                <div className='relative bg-gradient-to-r from-black to-blue-900 pt-26 mt-16 z-10 pl-96'>
+        {/* SECTION TWO - A.I.*/}
+        <div className='grid sm:grid-cols-3 grid-cols-1 bg-gradient-to-r from-black to-blue-900 pt-16 mb-0 sm:-mt-16 mt-48 relative z-2'>
           {/* Background Image. */}
-          <Image
-            src='/asset2.png'
-            alt='A.I image'
-            layout='fill'
-            objectFit='fill'
-          />
-
-          <span className='absolute top-64 left-0'>
+          <div className='col-span-3'>
+            <Image src='/asset2.png' alt='A.I image' height={600} width={880} />
+            <span className='absolute sm:top-64 left-0'>
+              <button
+                disabled='disabled'
+                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Pencils
+              </button>
+            </span>
+          <span className='absolute sm:top-52 left-72 '>
             <button
               disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
-            >
-              <span className='pr-2 text-gray-400'>#</span> Pencils
+              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+              >
+              <span className='pr-1 text-gray-400'>#</span> Person
             </button>
           </span>
-          <span className='absolute top-52 left-72 '>
+          <span className='absolute sm:top-96 left-20 ml-28'>
             <button
               disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
-            >
-              <span className='pr-2 text-gray-400'>#</span> Person
-            </button>
-          </span>
-          <span className='absolute top-96 left-20 ml-28'>
-            <button
-              disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
-            >
-              <span className='pr-2 text-gray-400'>#</span> Desk
+              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+              >
+              <span className='pr-1 text-gray-400'>#</span> Desk
             </button>
           </span>
           <span className='absolute top-96 left-96 ml-10'>
             <button
               disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
             >
-              <span className='pr-2 text-gray-400'>#</span> Pencils
+              <span className='pr-1 text-gray-400'>#</span> Pencils
             </button>
           </span>
           <span className='absolute top-96 left-20 mt-36'>
             <button
               disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
             >
-              <span className='pr-2 text-gray-400'>#</span> Person
+              <span className='pr-1 text-gray-400'>#</span> Person
             </button>
           </span>
           <span className='absolute top-96 left-96 mt-36 ml-36'>
             <button
               disabled='disabled'
-              className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
             >
-              <span className='pr-2 text-gray-400'>#</span> Scenary
+              <span className='pr-1 text-gray-400'>#</span> Scenary
             </button>
-          </span>
-
-          <div className='sticky my-20 bg-white rounded-lg  px-5 py-8 ml-72 w-96'>
+          </span> 
+          </div>
+          <div className='sm:absolute sm:top-0 sm:right-2 sm:z-5 sm:w-1/3 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5'>
             <div>
               <p className='text-gray-400 whitespace-nowrap '>
                 Artificial Intelligence
               </p>
             </div>
-            <div className='text-3xl font-medium'>
+            <div className='text-2xl font-medium'>
               <p className='text-gray-600 whitespace-nowrap pt-8 '>
                 Let <span className='text-pink-600'>A.I.</span> handle lorem
               </p>
@@ -276,25 +268,13 @@ export default function Home({ homepage }) {
               src='/ai.png'
               alt='image'
             />
-
-            <div className='text-xl font-normal'>
-              <p className='text-gray-400 whitespace-nowrap'>
-                <span className='text-gray-600'> No more need to </span> lorem
-                ipsum dolor sit
-              </p>
-              <p className='text-gray-400 whitespace-nowrap'>
-                amet, consectetur adipiscing elit, sed
-              </p>
-              <p className='text-gray-400 whitespace-nowrap'>
-                do eiusmod tempor incididunt ut labore
-              </p>
-              <p className='text-gray-400 whitespace-nowrap'>
-                et dolore magna.
-              </p>
+            <div className='text-xl font-normal text-gray-400'>
+              <span className='text-gray-600'> No more need to </span> lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna.
             </div>
           </div>
         </div>
-
       </main>
       <footer className='bg-gradient-to-r from-primary to-secondary h-72 w-full'></footer>
     </div>
