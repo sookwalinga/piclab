@@ -45,8 +45,8 @@ export default function Home({ homepage }) {
         ></script> */}
       </Head>
 
+      {/* HERO SECTION */}
       <main className=' bg-gradient-to-r from-primary via-blue-900 to-secondary'>
-        {/* HERO SECTION */}
         <div className='grid grid-cols-1 sm:grid-cols-4 text-white pl-10  '>
           {/* LEFT  COL */}
           <div className='sm:pl-20 sm:col-span-2 pt-20'>
@@ -171,7 +171,7 @@ export default function Home({ homepage }) {
         {/* REQUEST BETA FIXED FORM */}
         <div className='fixed bottom-0 sm:right-12 mb-2 bg-white rounded-lg grid sm:grid-cols-4 sm:w-11/12 w-full  p-2 z-30  text-xs'>
           <div className='text-black col-span-2'>
-            <form action='#' method='post'>
+            <form action='#' method='post' className>
               <div className='flex border-2 rounded-lg sm:mr-36 px-1'>
                 <FontAwesomeIcon
                   icon={faEnvelope}
