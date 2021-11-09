@@ -115,7 +115,7 @@ export default function Home({ homepage }) {
                 className='drop-shadow-2xl'
               />
             </span>
-            <span className='absolute sm:top-72 sm:left-96 sm:ml-16 sm:mt-24 top-96 mt-52 left-0 '>
+            <span className='absolute sm:top-72 sm:left-96 sm:ml-10 sm:mt-24 top-96 mt-52 left-0 '>
               <Image
                 src='/hero3.png'
                 alt='image'
@@ -158,7 +158,7 @@ export default function Home({ homepage }) {
               </button>
             </span>
 
-            <span className='absolute sm:top-96 sm:mt-5 sm:ml-48 sm:left-96 bottom-0 left-28'>
+            <span className='absolute sm:top-96 sm:mt-5 sm:ml-44 sm:left-96 bottom-0 left-28'>
               <button
                 disabled='disabled'
                 className='border py-0.5 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600 text-xs'
