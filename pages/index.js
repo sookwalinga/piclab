@@ -173,7 +173,7 @@ export default function Home({ homepage }) {
         <div className='fixed bottom-0 sm:right-12 mb-2 bg-white rounded-lg grid sm:grid-cols-4 sm:w-11/12 w-full  p-2 z-30  text-xs'>
           <div className='text-black col-span-2'>
             <form action='#' method='post'>
-              <div className='grid grid-cols-2 rounded-lg px-2 py-1'>
+              <div className='grid grid-cols-2 rounded-lg px-2 py-1 sm:justify-items-start justify-items-end'>
                 <div className=' flex flex-nowrap'>
                   <FontAwesomeIcon
                     icon={faEnvelope}
@@ -241,7 +241,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Desk
               </button>
             </span>
-            <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-60 md:ml-0'>
+            <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-52 md:ml-0'>
               <button
                 disabled='disabled'
                 className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
@@ -257,7 +257,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-64 md:ml-10'>
+            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-56 md:ml-10'>
               <button
                 disabled='disabled'
                 className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
@@ -266,7 +266,7 @@ export default function Home({ homepage }) {
               </button>
             </span>
           </div>
-          <div className='sm:absolute sm:top-8 sm:right-2 sm:z-5 sm:w-1/4 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5 md:w-60'>
+          <div className='sm:absolute sm:top-8 sm:right-2 sm:z-5 sm:w-1/4 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5 md:w-72'>
             <div>
               <p className='text-gray-400 whitespace-nowrap text-base'>
                 Artificial Intelligence
