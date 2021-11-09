@@ -177,7 +177,7 @@ export default function Home({ homepage }) {
                   icon={faEnvelope}
                   size='lg'
                   color='#d1d1d1'
-                  className='mt-2.5'
+                  className='mt-2'
                 />
                 <input
                   type='email'
