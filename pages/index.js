@@ -23,6 +23,16 @@ export default function Home({ homepage }) {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    initialSlide: 1,
+    responsive: [
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className='font-Inter text-white'>
@@ -51,7 +61,7 @@ export default function Home({ homepage }) {
             <p className='pt-4 text-2xl'>Powerful image</p>
             <p className='text-2xl font-bold'>asset management</p>
             <p className='text-2xl'>for everyone.</p>
-            <div className='sm:pt-20 pt-8 mr-8 pb-24'>
+            <div className='sm:pt-20 pt-8 mr-8 pb-36'>
               <div className='border-l-2  border-black-500 h-20 w-72 text-sm'>
                 <div className='ml-8'>
                   <span className='font-bold mr-1'>
@@ -86,7 +96,7 @@ export default function Home({ homepage }) {
               />
             </span>
 
-            <span className='absolute sm:top-5 sm:right-72 top-96 mt-10'>
+            <span className='absolute sm:top-5 sm:right-72 top-96 mt-12'>
               <Image
                 src='/hero1.png'
                 alt='image'
@@ -112,13 +122,13 @@ export default function Home({ homepage }) {
               </button>
             </span>
             <span className='absolute sm:top-44 right-0 mt-10'>
-            <button
-              disabled='disabled'
-              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
-            >
-              <span className='pr-1 text-gray-400'>#</span> Scenary
-            </button>
-          </span> 
+              <button
+                disabled='disabled'
+                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Scenary
+              </button>
+            </span>
 
             <span className='absolute sm:top-40 sm:right-56 sm:mt-0 top-96 right-8 mt-28 '>
               <Image
@@ -187,13 +197,7 @@ export default function Home({ homepage }) {
             </form>
           </div>
           <div className='text-black flex flex-row justify-self-start sm:mt-0 mt-2'>
-            <Image
-              src='/logo-red.png'
-              alt='Logo'
-              // layout='fill'
-              width={10}
-              height={20}
-            />
+            <Image src='/logo-red.png' alt='Logo' width={10} height={20} />
             <h1 className='pl-2 pt-2'>PICLAB</h1>
           </div>
           <div className='pt-2 justify-self-end mr-5'>
@@ -205,9 +209,9 @@ export default function Home({ homepage }) {
         </div>
 
         {/* SECTION TWO - A.I.*/}
-        <div className='grid sm:grid-cols-3 grid-cols-1 bg-gradient-to-r from-black to-blue-900 pt-16 mb-0 sm:-mt-16 mt-48 relative z-2'>
+        <div className='grid sm:grid-cols-3 grid-cols-1 bg-gradient-to-r from-black to-blue-900 pt-16 mb-0 sm:-mt-16 mt-48 relative'>
           {/* Background Image. */}
-          <div className='col-span-3'>
+          <div className='col-span-3 -mb-2'>
             <Image src='/asset2.png' alt='A.I image' height={600} width={880} />
             <span className='absolute sm:top-64 mt-10 left-0'>
               <button
@@ -217,46 +221,46 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Pencils
               </button>
             </span>
-          <span className='absolute sm:top-52 sm:left-72 left-40'>
-            <button
-              disabled='disabled'
-              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+            <span className='absolute sm:top-52 sm:left-72 left-40'>
+              <button
+                disabled='disabled'
+                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
               >
-              <span className='pr-1 text-gray-400'>#</span> Person
-            </button>
-          </span>
-          <span className='absolute sm:top-96 left-20 top-40 sm:ml-28'>
-            <button
-              disabled='disabled'
-              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+                <span className='pr-1 text-gray-400'>#</span> Person
+              </button>
+            </span>
+            <span className='absolute sm:top-96 left-20 top-40 sm:ml-28'>
+              <button
+                disabled='disabled'
+                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
               >
-              <span className='pr-1 text-gray-400'>#</span> Desk
-            </button>
-          </span>
-          <span className='absolute sm:top-96 sm:left-96 top-40 sm:ml-10 left-60'>
-            <button
-              disabled='disabled'
-              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
-            >
-              <span className='pr-1 text-gray-400'>#</span> Pencils
-            </button>
-          </span>
-          <span className='absolute sm:top-96 top-20 left-10 mt-36'>
-            <button
-              disabled='disabled'
-              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
-            >
-              <span className='pr-1 text-gray-400'>#</span> Person
-            </button>
-          </span>
-          <span className='absolute sm:top-96 sm:left-96 mt-36 sm:ml-36 top-20 left-72'>
-            <button
-              disabled='disabled'
-              className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
-            >
-              <span className='pr-1 text-gray-400'>#</span> Scenary
-            </button>
-          </span> 
+                <span className='pr-1 text-gray-400'>#</span> Desk
+              </button>
+            </span>
+            <span className='absolute sm:top-96 sm:left-96 top-40 sm:ml-10 left-60'>
+              <button
+                disabled='disabled'
+                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Pencils
+              </button>
+            </span>
+            <span className='absolute sm:top-96 top-20 left-10 mt-36'>
+              <button
+                disabled='disabled'
+                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Person
+              </button>
+            </span>
+            <span className='absolute sm:top-96 sm:left-96 mt-36 sm:ml-36 top-20 left-72'>
+              <button
+                disabled='disabled'
+                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Scenary
+              </button>
+            </span>
           </div>
           <div className='sm:absolute sm:top-0 sm:right-2 sm:z-5 sm:w-1/3 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5'>
             <div>
@@ -283,6 +287,84 @@ export default function Home({ homepage }) {
               tempor incididunt ut labore et dolore magna.
             </div>
           </div>
+        </div>
+
+        {/* SECTION 3 WITH CAROUSEL*/}
+        <div className='bg-gradient-to-r from-primary to-secondary pt-10 pb-10 '>
+          <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
+            Why <span className='font-bold px-2'>PicLab</span> is the perfect
+          </h1>
+          <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
+            lorem ipsum for you.
+          </h1>
+          <Slider {...carouselSettings} className='pt-10 sm:px-4 px-1 z-10 rounded-lg '>
+            {/* SLIDE 1 */}
+            <div className='bg-white rounded-lg px-2 pt-8 sm:ml-2 '>
+              <div className='px-10 text-gray-400'>All-in-one</div>
+              <div className='text-2xl font-medium py-5 px-10'>
+                <p className='text-gray-600'>
+                  Lorem
+                  <span className='text-pink-600 pr-1.5'>all of your file</span>
+                  management on PicLab ipsum.
+                </p>
+              </div>
+
+              <div className='text-xl font-normal px-10 text-gray-400 pb-10'>
+                <span className='text-gray-600'> No more need to </span> lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna.
+              </div>
+              <img
+                className='w-screen shadow rounded h-auto align-middle border-none px-0 mt-10 pb-2'
+                src='/carousel-image-1.png'
+                alt='image'
+              />
+            </div>
+
+            {/* SLIDE 2 */}
+            <div className='bg-white rounded-lg px-2 pt-8 sm:ml-8'>
+              <div className='px-10 text-gray-400'>Organization</div>
+              <div className='text-2xl font-medium py-5 px-10'>
+                <p className='text-gray-600'>
+                  Lorem ipsum
+                  <span className='text-pink-600 px-1.5'>organization</span>
+                  dor sit epsilon.
+                </p>
+              </div>
+
+              <div className='text-xl font-normal px-10 text-gray-400'>
+                <span className='text-gray-600'> Easily organize </span> all of
+                lorem dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna.
+              </div>
+              <img
+                className='w-screen shadow rounded h-auto align-middle border-none px-0 mt-20 pb-2'
+                src='/carousel-image-2.png'
+                alt='image'
+              />
+            </div>
+
+            {/* SLIDE 3 */}
+            <div className='bg-white rounded-lg px-2 pt-8 sm:ml-20 '>
+              <div className='px-10 text-gray-400'>Lorem</div>
+              <div className='text-2xl text-gray-600 font-medium py-5 px-10'>
+                Lorem
+                <span className='text-pink-600 px-1.5'>all of your file</span>
+                management on PicLab ipsum.
+              </div>
+
+              <div className='text-xl font-normal px-10 text-gray-400 sm:pb-9'>
+                <span className='text-gray-600'> No more need to </span> lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna.
+              </div>
+              <img
+                className='w-auto shadow rounded h-auto align-middle border-none px-0 mt-10 pb-2'
+                src='/carousel-image-3.png'
+                alt='image'
+              />
+            </div>
+          </Slider>
         </div>
       </main>
       <footer className='bg-gradient-to-r from-primary to-secondary h-72 w-full'></footer>
