@@ -253,7 +253,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-72'>
+            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-64'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -416,6 +416,58 @@ export default function Home({ homepage }) {
             <div className='static right-10  border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
             <div className='sticky right-10 z-5 border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
             <div className='static right-10 border-8 w-0 h-64 mx-5 -mt-20 bg-white-100'></div>
+          </div>
+        </div>
+
+        {/* SECTION FIVE - REQUEST BETA */}
+        <div className='relative h-96 py-96 '>
+          {/* Background Image. */}
+          <Image
+            src='/footer-bg.png'
+            alt='Footer background image'
+            layout='fill'
+            objectFit='cover'
+          />
+          <div className='relative z-2 bg-black h-96 py-96 -my-96 flex justify-center bg-opacity-80 mx-50'>
+            <div className='no-flex -mt-36'>
+              <div className='text-2xl align-items-center'>
+                <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
+                  Let's get started lorem
+                </h1>
+                <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
+                  ipsum with<span className='font-bold px-2'>PicLab</span>
+                </h1>
+              </div>
+              <div className='text-black bg-white w-full mt-10 p-2 rounded mx-auto'>
+                <form action='#' method='post'>
+                  <div className='grid grid-cols-3 rounded-lg px-2'>
+                    <div className='col-span-2 flex flex-nowrap'>
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        size='lg'
+                        color='#d1d1d1'
+                        // className='mt-1.5'
+                      />
+                      <input
+                        type='email'
+                        name='client-email'
+                        id='client-email'
+                        className='pl-2 text-sm w-full'
+                        placeholder='Enter email'
+                      />
+                    </div>
+                    <div>
+                      <button
+                        type='submit'
+                        className='whitespace-nowrap text-pink-600 text-sm'
+                      >
+                        |<span className='pl-5'>Request Beta</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </main>
