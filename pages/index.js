@@ -47,10 +47,10 @@ export default function Home({ homepage }) {
 
       <main className=' bg-gradient-to-b from-primary via-blue-900 to-secondary'>
         {/* HERO SECTION */}
-        <div className='grid grid-cols-1 sm:grid-cols-3 text-white pl-10  md:pl-0'>
+        <div className='grid grid-cols-1 sm:grid-cols-3 text-white pl-10 md:pt-5 md:pl-0'>
           {/* LEFT  COL */}
           <div className='sm:pl-20 pt-20 md:pl-8'>
-            <div className='flex flex-row  sm:w-96 sm:pb-24 pb-10'>
+            <div className='flex flex-row  sm:w-96 sm:pb-14 pb-10'>
               <Image src='/logo.png' alt='Logo' width={20} height={40} />
               <h1 className='pl-2 pt-2 font-bold'>PICLAB</h1>
             </div>
@@ -61,7 +61,7 @@ export default function Home({ homepage }) {
             <p className='pt-4 text-xl'>Powerful image</p>
             <p className='text-xl font-bold'>asset management</p>
             <p className='text-xl'>for everyone.</p>
-            <div className='sm:pt-16 pt-8 mr-8 pb-36'>
+            <div className='sm:pt-16 pt-8 mr-8 sm:pb-48 pb-36'>
               <div className='border-l-2  border-black-500 text-sm flex'>
                 <div className='ml-8'>
                   <span className='font-bold mr-1'>
