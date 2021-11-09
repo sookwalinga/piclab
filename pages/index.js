@@ -26,7 +26,7 @@ export default function Home({ homepage }) {
     initialSlide: 1,
     responsive: [
       {
-        breakpoint: 400,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -241,7 +241,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Desk
               </button>
             </span>
-            <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-52 md:ml-0'>
+            <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-56 md:ml-0'>
               <button
                 disabled='disabled'
                 className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
@@ -257,7 +257,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-56 md:ml-10'>
+            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-60 md:ml-10'>
               <button
                 disabled='disabled'
                 className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
@@ -450,7 +450,7 @@ export default function Home({ homepage }) {
                         icon={faEnvelope}
                         size='lg'
                         color='#d1d1d1'
-                        // className='mt-1.5'
+                        className='mt-0.5'
                       />
                       <input
                         type='email'
