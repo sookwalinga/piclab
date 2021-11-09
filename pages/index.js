@@ -45,24 +45,24 @@ export default function Home({ homepage }) {
         ></script> */}
       </Head>
 
-      <main className=' bg-gradient-to-r from-primary via-blue-900 to-secondary'>
+      <main className=' bg-gradient-to-b from-primary via-blue-900 to-secondary'>
         {/* HERO SECTION */}
-        <div className='grid grid-cols-1 sm:grid-cols-4 text-white pl-10  '>
+        <div className='grid grid-cols-1 sm:grid-cols-3 text-white pl-10  md:pl-0'>
           {/* LEFT  COL */}
-          <div className='sm:pl-20 sm:col-span-2 pt-20'>
+          <div className='sm:pl-20 pt-20 md:pl-8'>
             <div className='flex flex-row  sm:w-96 sm:pb-24 pb-10'>
               <Image src='/logo.png' alt='Logo' width={20} height={40} />
               <h1 className='pl-2 pt-2 font-bold'>PICLAB</h1>
             </div>
 
-            <button className='border-2 rounded-lg border-black-500 px-2 pt-1text-xs font-Idlewild'>
+            <button className='border-2 rounded-lg border-black-500 p-0.5 text-xs font-Idlewild'>
               COMING SUMMER 2021
             </button>
-            <p className='pt-4 text-2xl'>Powerful image</p>
-            <p className='text-2xl font-bold'>asset management</p>
-            <p className='text-2xl'>for everyone.</p>
-            <div className='sm:pt-20 pt-8 mr-8 pb-36'>
-              <div className='border-l-2  border-black-500 h-20 w-72 text-sm'>
+            <p className='pt-4 text-xl'>Powerful image</p>
+            <p className='text-xl font-bold'>asset management</p>
+            <p className='text-xl'>for everyone.</p>
+            <div className='sm:pt-16 pt-8 mr-8 pb-36'>
+              <div className='border-l-2  border-black-500 text-sm flex'>
                 <div className='ml-8'>
                   <span className='font-bold mr-1'>
                     Organize, transform, & serve
@@ -76,7 +76,7 @@ export default function Home({ homepage }) {
 
           {/* RIGHT COL */}
           <div className='sm:col-span-2'>
-            <span className='absolute sm:top-28 top-96 sm:right-0  sm:mt-0 mt-20 sm:ml-0 ml-5'>
+            <span className='absolute sm:top-28 top-96 sm:right-0  sm:mt-0 mt-20 sm:ml-0 ml-5 md:ml-72 md:top-28'>
               <Image
                 src='/footer-bg.png'
                 alt='image'
@@ -86,17 +86,18 @@ export default function Home({ homepage }) {
               />
             </span>
 
-            <span className='absolute sm:top-10 top-96 right-0 sm:mt-0 mt-12'>
+            <span className='absolute sm:top-10 top-96 right-0 sm:mt-0 mt-12 md:ml-44 md:top-16'>
               <Image
                 src='/apple-mac.png'
                 alt='image'
                 height={600}
                 width={700}
+                priority='true'
                 className='drop-shadow-2xl'
               />
             </span>
 
-            <span className='absolute sm:top-5 sm:right-72 top-96 mt-12'>
+            <span className='absolute sm:top-5 sm:right-72 top-96 mt-12 md:right-64'>
               <Image
                 src='/hero1.png'
                 alt='image'
@@ -139,15 +140,7 @@ export default function Home({ homepage }) {
                 className='drop-shadow-2xl'
               />
             </span>
-            <span className='absolute sm:top-96 sm:right-48 sm:mt-16 right-16 top-96 mt-60'>
-              <button
-                disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900 text-xs'
-              >
-                <span className='pr-2 text-gray-400'>#</span> Water
-              </button>
-            </span>
-            <span className='absolute sm:top-72 sm:left-96 sm:ml-10 sm:mt-24 top-96 mt-52 left-0'>
+            <span className='absolute sm:top-72 sm:left-96 sm:ml-10 sm:mt-24 top-96 mt-52 left-0 '>
               <Image
                 src='/hero3.png'
                 alt='image'
@@ -155,6 +148,14 @@ export default function Home({ homepage }) {
                 width={200}
                 className='drop-shadow-2xl'
               />
+            </span>
+            <span className='absolute sm:top-96 sm:right-48 sm:mt-16 right-16 top-96 mt-60 md:mt-8 md:right-44'>
+              <button
+                disabled='disabled'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900 text-xs'
+              >
+                <span className='pr-2 text-gray-400'>#</span> Water
+              </button>
             </span>
 
             <span className='absolute sm:top-96 sm:mt-5 sm:ml-44 sm:left-96 bottom-0 left-28'>
@@ -172,27 +173,30 @@ export default function Home({ homepage }) {
         <div className='fixed bottom-0 sm:right-12 mb-2 bg-white rounded-lg grid sm:grid-cols-4 sm:w-11/12 w-full  p-2 z-30  text-xs'>
           <div className='text-black col-span-2'>
             <form action='#' method='post'>
-              <div className='flex border-2 rounded-lg sm:mr-36 px-1'>
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  size='lg'
-                  color='#d1d1d1'
-                  className='mt-2'
-                />
-                <input
-                  type='email'
-                  name='client-email'
-                  id='client-email'
-                  className='p-2'
-                  placeholder='Enter email'
-                />
-
-                <button
-                  type='submit'
-                  className='whitespace-nowrap text-pink-600'
-                >
-                  | <span className='pl-8 '> Request Beta</span>
-                </button>
+              <div className='grid grid-cols-2 rounded-lg px-2 py-1'>
+                <div className=' flex flex-nowrap'>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size='lg'
+                    color='#d1d1d1'
+                    className='mt-0.5'
+                  />
+                  <input
+                    type='email'
+                    name='client-email'
+                    id='client-email1'
+                    className='pl-2 text-sm w-full'
+                    placeholder='Enter email'
+                  />
+                </div>
+                <div>
+                  <button
+                    type='submit'
+                    className='whitespace-nowrap text-pink-600 text-sm'
+                  >
+                    |<span className='pl-5'>Request Beta</span>
+                  </button>
+                </div>
               </div>
             </form>
           </div>
@@ -200,7 +204,7 @@ export default function Home({ homepage }) {
             <Image src='/logo-red.png' alt='Logo' width={10} height={20} />
             <h1 className='pl-2 pt-2'>PICLAB</h1>
           </div>
-          <div className='pt-2 justify-self-end mr-5'>
+          <div className='pt-2 justify-self-end mr-5 md:pt-0.5'>
             <button type='submit' className='text-pink-600 whitespace-nowrap'>
               <FontAwesomeIcon icon={faSignInAlt} size='lg' />
               <span className='pl-2 text-sm'> Sign In</span>
@@ -209,7 +213,7 @@ export default function Home({ homepage }) {
         </div>
 
         {/* SECTION TWO - A.I.*/}
-        <div className='grid sm:grid-cols-3 grid-cols-1 bg-gradient-to-r from-black to-blue-900 pt-20 mb-0 sm:-mt-20 mt-48 relative'>
+        <div className='grid sm:grid-cols-3 grid-cols-1 bg-gradient-to-r from-black to-blue-900 pt-20 mb-0 sm:-mt-24 mt-40 md:-mt-32 relative'>
           {/* Background Image. */}
           <div className='col-span-3 -mb-2'>
             <Image src='/asset2.png' alt='A.I image' height={480} width={880} />
@@ -237,7 +241,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Desk
               </button>
             </span>
-            <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-60'>
+            <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-60 md:ml-0'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -253,7 +257,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-64'>
+            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-64 md:ml-10'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -262,7 +266,7 @@ export default function Home({ homepage }) {
               </button>
             </span>
           </div>
-          <div className='sm:absolute sm:top-8 sm:right-2 sm:z-5 sm:w-1/4 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5'>
+          <div className='sm:absolute sm:top-8 sm:right-2 sm:z-5 sm:w-1/4 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5 md:w-60'>
             <div>
               <p className='text-gray-400 whitespace-nowrap text-base'>
                 Artificial Intelligence
@@ -379,8 +383,8 @@ export default function Home({ homepage }) {
             layout='fill'
             objectFit='cover'
           />
-          <div className='sm:ml-10 px-20'>
-            <h1 className='my-20 text-3xl'>
+          <div className='sm:ml-10 px-10'>
+            <h1 className='my-20 text-2xl'>
               <span className=' font-bold pr-2'>News</span>lorem at PicLab
             </h1>
 
@@ -412,7 +416,7 @@ export default function Home({ homepage }) {
           </div>
 
           {/* PicLab logo. */}
-          <div className='flex sm:ml-72 sm:mt-20 sm:pb-0 mt-36 ml-24 '>
+          <div className='flex sm:ml-72 sm:mt-20 sm:pb-0 mt-36 ml-24 md:ml-52'>
             <div className='static right-10  border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
             <div className='sticky right-10 z-5 border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
             <div className='static right-10 border-8 w-0 h-64 mx-5 -mt-20 bg-white-100'></div>
@@ -451,7 +455,7 @@ export default function Home({ homepage }) {
                       <input
                         type='email'
                         name='client-email'
-                        id='client-email'
+                        id='client-email2'
                         className='pl-2 text-sm w-full'
                         placeholder='Enter email'
                       />
