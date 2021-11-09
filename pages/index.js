@@ -209,11 +209,11 @@ export default function Home({ homepage }) {
         </div>
 
         {/* SECTION TWO - A.I.*/}
-        <div className='grid sm:grid-cols-3 grid-cols-1 bg-gradient-to-r from-black to-blue-900 pt-16 mb-0 sm:-mt-16 mt-48 relative'>
+        <div className='grid sm:grid-cols-3 grid-cols-1 bg-gradient-to-r from-black to-blue-900 pt-20 mb-0 sm:-mt-20 mt-48 relative'>
           {/* Background Image. */}
           <div className='col-span-3 -mb-2'>
-            <Image src='/asset2.png' alt='A.I image' height={600} width={880} />
-            <span className='absolute sm:top-64 mt-10 left-0'>
+            <Image src='/asset2.png' alt='A.I image' height={480} width={880} />
+            <span className='absolute sm:top-48 mt-10 left-0'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -221,7 +221,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Pencils
               </button>
             </span>
-            <span className='absolute sm:top-52 sm:left-72 left-40'>
+            <span className='absolute sm:top-44 sm:left-72 left-40'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -229,7 +229,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-96 left-20 top-40 sm:ml-28'>
+            <span className='absolute sm:top-64 left-20 top-40 sm:ml-28'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -237,7 +237,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Desk
               </button>
             </span>
-            <span className='absolute sm:top-96 sm:left-96 top-40 sm:ml-10 left-60'>
+            <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-60'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -245,7 +245,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Pencils
               </button>
             </span>
-            <span className='absolute sm:top-96 top-20 left-10 mt-36'>
+            <span className='absolute sm:top-64 top-20 left-10 mt-36'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -253,7 +253,7 @@ export default function Home({ homepage }) {
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute sm:top-96 sm:left-96 mt-36 sm:ml-36 top-20 left-72'>
+            <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-72'>
               <button
                 disabled='disabled'
                 className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
@@ -262,14 +262,14 @@ export default function Home({ homepage }) {
               </button>
             </span>
           </div>
-          <div className='sm:absolute sm:top-0 sm:right-2 sm:z-5 sm:w-1/3 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5'>
+          <div className='sm:absolute sm:top-8 sm:right-2 sm:z-5 sm:w-1/4 sm:my-10 bg-white rounded-lg p-8 sm:mr-10 mx-5 mb-5'>
             <div>
-              <p className='text-gray-400 whitespace-nowrap '>
+              <p className='text-gray-400 whitespace-nowrap text-base'>
                 Artificial Intelligence
               </p>
             </div>
-            <div className='text-2xl font-medium'>
-              <p className='text-gray-600 whitespace-nowrap pt-8 '>
+            <div className='text-lg font-medium'>
+              <p className='text-gray-600 whitespace-nowrap pt-5 '>
                 Let <span className='text-pink-600'>A.I.</span> handle lorem
               </p>
               <p className='text-gray-600 whitespace-nowrap'>
@@ -277,11 +277,11 @@ export default function Home({ homepage }) {
               </p>
             </div>
             <img
-              className='w-36 shadow rounded h-auto align-middle border-none mx-auto my-14'
+              className='w-20 shadow rounded h-auto align-middle border-none mx-auto my-10'
               src='/ai.png'
               alt='image'
             />
-            <div className='text-xl font-normal text-gray-400'>
+            <div className='text-sm font-normal text-gray-400'>
               <span className='text-gray-600'> No more need to </span> lorem
               ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna.
@@ -297,7 +297,10 @@ export default function Home({ homepage }) {
           <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
             lorem ipsum for you.
           </h1>
-          <Slider {...carouselSettings} className='pt-10 sm:px-4 px-1 z-10 rounded-lg '>
+          <Slider
+            {...carouselSettings}
+            className='pt-10 sm:px-4 px-1 z-10 rounded-lg '
+          >
             {/* SLIDE 1 */}
             <div className='bg-white rounded-lg px-2 pt-8 sm:ml-2 '>
               <div className='px-10 text-gray-400'>All-in-one</div>
@@ -365,6 +368,55 @@ export default function Home({ homepage }) {
               />
             </div>
           </Slider>
+        </div>
+
+        {/* SECTION FOUR - NEWS */}
+        <div className='relative grid sm:grid-cols-2 grid-cols-1 w-full bg-gradient-to-r from-black to-blue-900 sm:py-36 sm:-mt-32'>
+          {/* Background Image. */}
+          <Image
+            src='/asset3.png'
+            alt='Background picture for news section.'
+            layout='fill'
+            objectFit='cover'
+          />
+          <div className='sm:ml-10 px-20'>
+            <h1 className='my-20 text-3xl'>
+              <span className=' font-bold pr-2'>News</span>lorem at PicLab
+            </h1>
+
+            <div className='flex'>
+              <p className='text-gray-400 mr-10'>
+                {RichText.asText(homepage.data.newsdate1)}
+              </p>
+              <div className='no-flex'>
+                <Link href='#'>
+                  <a className='underline'>
+                    {RichText.asText(homepage.data.news1)}
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <hr className='w-100 h-0 my-10 bg-gray-400' />
+            <div className='flex'>
+              <p className='text-gray-400 mr-14'>
+                {RichText.asText(homepage.data.newsdate2)}
+              </p>
+              <div className='no-flex'>
+                <Link href='#'>
+                  <a className='underline'>
+                    {RichText.asText(homepage.data.news2)}
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* PicLab logo. */}
+          <div className='flex sm:ml-72 sm:mt-20 sm:pb-0 mt-36 ml-24 '>
+            <div className='static right-10  border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
+            <div className='sticky right-10 z-5 border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
+            <div className='static right-10 border-8 w-0 h-64 mx-5 -mt-20 bg-white-100'></div>
+          </div>
         </div>
       </main>
       <footer className='bg-gradient-to-r from-primary to-secondary h-72 w-full'></footer>
