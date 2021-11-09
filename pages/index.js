@@ -14,7 +14,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
-
 export default function Home({ homepage }) {
   var carouselSettings = {
     arrows: false,
@@ -26,7 +25,7 @@ export default function Home({ homepage }) {
     pauseOnHover: true,
   };
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen font-Inter text-white overflow-hidden'>
+    <div className='font-Inter text-white'>
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
@@ -37,27 +36,22 @@ export default function Home({ homepage }) {
       </Head>
 
       {/* HERO SECTION */}
-      <main className='flex flex-col  w-full bg-gradient-to-r from-primary via-blue-900 to-secondary'>
-        <div className='flex flex-row  w-full'>
-          <div className='flex-2 px-20 pt-20'>
-            <div className='flex flex-row  w-full pb-36 '>
-              <Image
-                src='/logo.png'
-                alt='Logo'
-                // layout='fill'
-                width={20}
-                height={40}
-              />
+      <main className=' bg-gradient-to-r from-primary via-blue-900 to-secondary'>
+        <div className='grid grid-cols-1 sm:grid-cols-4 text-white pl-10  '>
+          {/* LEFT  COL */}
+          <div className='sm:pl-20 sm:col-span-2 pt-20'>
+            <div className='flex flex-row  sm:w-96 sm:pb-24 pb-10'>
+              <Image src='/logo.png' alt='Logo' width={20} height={40} />
               <h1 className='pl-2 pt-2 font-bold'>PICLAB</h1>
             </div>
 
-            <button className='border-2 rounded-lg border-black-500 px-2 text-xs font-Idlewild'>
+            <button className='border-2 rounded-lg border-black-500 px-2 pt-1text-xs font-Idlewild'>
               COMING SUMMER 2021
             </button>
-            <p className='pt-6 text-3xl'>Powerful image</p>
-            <p className='text-3xl font-bold'>asset management</p>
-            <p className='text-3xl'>for everyone.</p>
-            <div className='pt-20 mr-8'>
+            <p className='pt-4 text-2xl'>Powerful image</p>
+            <p className='text-2xl font-bold'>asset management</p>
+            <p className='text-2xl'>for everyone.</p>
+            <div className='sm:pt-20 pt-8 mr-8 pb-24'>
               <div className='border-l-2  border-black-500 h-20 w-72 text-sm'>
                 <div className='ml-8'>
                   <span className='font-bold mr-1'>
@@ -69,138 +63,143 @@ export default function Home({ homepage }) {
               </div>
             </div>
           </div>
-          <div className='static left-20'>
-            <span className='absolute top-28 right-0'>
+
+          {/* RIGHT COL */}
+          <div className='sm:col-span-2'>
+            <span className='absolute sm:top-28 top-96 sm:right-0  sm:mt-0 mt-20 sm:ml-0 ml-5'>
               <Image
                 src='/footer-bg.png'
                 alt='image'
-                height={700}
-                width={810}
+                height={500}
+                width={580}
                 className='drop-shadow-2xl'
               />
             </span>
 
-            <span className='absolute top-10 right-0'>
+            <span className='absolute sm:top-10 top-96 right-0 sm:mt-0 mt-12'>
               <Image
                 src='/apple-mac.png'
                 alt='image'
-                height={800}
-                width={1000}
+                height={600}
+                width={700}
                 className='drop-shadow-2xl'
               />
             </span>
-            <span className='absolute top-10 right-96'>
+
+            <span className='absolute sm:top-5 sm:right-72 top-96 mt-10'>
               <Image
                 src='/hero1.png'
                 alt='image'
-                height={250}
-                width={300}
+                height={160}
+                width={200}
                 className='drop-shadow-2xl'
               />
             </span>
-            <span className='absolute top-16 right-96 mr-56 mt-10'>
+            <span className='absolute sm:top-16 sm:right-96 mr-10 sm:mt-10 -mt-10'>
               <button
                 disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400'
+                className='border-2 py-1 px-2 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400 text-xs'
               >
-                <span className='pr-2 text-gray-400'>#</span> Person
+                <span className='pr-1 text-gray-400'>#</span> Person
               </button>
             </span>
-            <span className='absolute top-16 right-0 mt-10'>
+            <span className='absolute sm:top-16 sm:right-44 sm:mt-10 right-0 -mt-10'>
               <button
                 disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gray-800'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gray-800 text-xs'
               >
                 <span className='pr-2 text-gray-400'>#</span> Pencils
               </button>
             </span>
-            <span className='absolute top-36 right-72'>
+            <span className='absolute sm:top-32 sm:right-56 sm:mt-0 top-96 right-8 mt-28 '>
               <Image
                 src='/hero2.png'
                 alt='image'
-                height={200}
-                width={240}
+                height={160}
+                width={200}
                 className='drop-shadow-2xl'
               />
             </span>
-            <span className='absolute top-96 right-96  mt-20'>
+            <span className='absolute sm:top-96 sm:right-48 sm:mt-16 right-16 top-96 mt-60'>
               <button
                 disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900 text-xs'
               >
                 <span className='pr-2 text-gray-400'>#</span> Water
               </button>
             </span>
-            <span className='absolute top-96 left-96 ml-10 mt-20'>
+            <span className='absolute sm:top-72 sm:left-96 sm:ml-10 sm:mt-24 top-96 mt-52 left-0'>
               <Image
                 src='/hero3.png'
                 alt='image'
-                height={200}
-                width={240}
+                height={160}
+                width={200}
                 className='drop-shadow-2xl'
               />
             </span>
 
-            <span className='absolute top-96 mt-24 md:ml-48 md:left-96 '>
+            <span className='absolute sm:top-96 sm:mt-5 sm:ml-44 sm:left-96 bottom-0 left-28'>
               <button
                 disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600'
+                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600 text-xs'
               >
                 <span className='pr-2 text-gray-400'>#</span> Desk
               </button>
             </span>
           </div>
+        </div>
 
-          {/* REQUEST BETA FIXED FORM */}
-          <div className='fixed bottom-0  mb-2 bg-white rounded-lg justify-evenly flex w-full p-2 z-30'>
-            <div className='text-black pr-56'>
-              <form action='#' method='post'>
-                <div className='flex border-2 rounded-lg px-6'>
-                  <FontAwesomeIcon
-                    icon={faEnvelope}
-                    size='lg'
-                    color='#d1d1d1'
-                    className='mt-2.5'
-                  />
-                  <input
-                    type='email'
-                    name='client-email'
-                    id='client-email'
-                    className='p-2'
-                    placeholder='Enter email'
-                  />
+        {/* REQUEST BETA FIXED FORM */}
+        <div className='fixed bottom-0 sm:right-12 mb-2 bg-white rounded-lg grid sm:grid-cols-4 sm:w-11/12 w-full  p-2 z-30  text-xs'>
+          <div className='text-black col-span-2'>
+            <form action='#' method='post' className>
+              <div className='flex border-2 rounded-lg sm:mr-36 px-1'>
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size='lg'
+                  color='#d1d1d1'
+                  className='mt-2.5'
+                />
+                <input
+                  type='email'
+                  name='client-email'
+                  id='client-email'
+                  className='p-2'
+                  placeholder='Enter email'
+                />
 
-                  <button
-                    type='submit'
-                    className='whitespace-nowrap text-pink-600'
-                  >
-                    | <span className='pl-8'> Request Beta</span>
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div className='flex flex-row  w-full text-black pl-0 '>
-              <Image
-                src='/logo-red.png'
-                alt='Logo'
-                // layout='fill'
-                width={10}
-                height={20}
-              />
-              <h1 className='pl-2 pt-2'>PICLAB</h1>
-            </div>
+                <button
+                  type='submit'
+                  className='whitespace-nowrap text-pink-600'
+                >
+                  | <span className='pl-8 '> Request Beta</span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div className='text-black flex flex-row justify-self-start sm:mt-0 mt-2'>
+            <Image
+              src='/logo-red.png'
+              alt='Logo'
+              // layout='fill'
+              width={10}
+              height={20}
+            />
+            <h1 className='pl-2 pt-2'>PICLAB</h1>
+          </div>
+          <div className='pt-2 justify-self-end mr-5'>
             <button
               type='submit'
-              className='text-pink-600 mr-10 whitespace-nowrap'
+              className='text-pink-600 whitespace-nowrap'
             >
               <FontAwesomeIcon icon={faSignInAlt} size='lg' />
-              <span className='pl-2'> Sign In</span>
+              <span className='pl-2 text-sm'> Sign In</span>
             </button>
           </div>
         </div>
 
-        {/* SECTION TWO - A.I.*/}
-        <div className='relative bg-gradient-to-r from-black to-blue-900 pt-26 mt-16 z-10 pl-96'>
+                {/* SECTION TWO - A.I.*/}
+                <div className='relative bg-gradient-to-r from-black to-blue-900 pt-26 mt-16 z-10 pl-96'>
           {/* Background Image. */}
           <Image
             src='/asset2.png'
@@ -258,7 +257,7 @@ export default function Home({ homepage }) {
             </button>
           </span>
 
-          <div className='sticky my-20 bg-white rounded-lg  px-5 py-8 ml-96 w-96'>
+          <div className='sticky my-20 bg-white rounded-lg  px-5 py-8 ml-72 w-96'>
             <div>
               <p className='text-gray-400 whitespace-nowrap '>
                 Artificial Intelligence
@@ -296,202 +295,6 @@ export default function Home({ homepage }) {
           </div>
         </div>
 
-        {/* SECTION 3 WITH CAROUSEL*/}
-        <div className='bg-gradient-to-r from-primary to-secondary px-8 pt-10 pb-10'>
-          <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
-            Why <span className='font-bold px-2'>PicLab</span> is the perfect
-          </h1>
-          <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
-            lorem ipsum for you.
-          </h1>
-          <Slider {...carouselSettings} className='pt-10 px-10 z-10 rounded-lg'>
-            {/* SLIDE 1 */}
-            <div className='bg-white rounded-lg px-2 pt-8 ml-2'>
-              <div className='px-10'>
-                <p className='text-gray-400 whitespace-nowrap '>All-in-one</p>
-              </div>
-              <div className='text-2xl font-medium py-5 px-10'>
-                <p className='text-gray-600'>
-                  Lorem <span className='text-pink-600'>all of your file</span>
-                  management on PicLab ipsum.
-                </p>
-              </div>
-
-              <div className='text-xl font-normal px-10 text-gray-400 pb-10'>
-                <p className='text-gray-400'>
-                  <span className='text-gray-600'> No more need to </span> lorem
-                  ipsum dolor sit amet,
-                </p>
-                <p className='whitespace-nowrap'>
-                  consectetur adipiscing elit, sed do eiusmod tempor
-                </p>
-                <p className='whitespace-nowrap'>
-                  incididunt ut labore et dolore magna.
-                </p>
-              </div>
-              <img
-                className='w-screen shadow rounded h-auto align-middle border-none px-0 mt-10 pb-2'
-                src='/carousel-image-1.png'
-                alt='image'
-              />
-            </div>
-
-            {/* SLIDE 2 */}
-            <div className='bg-white rounded-lg px-2 pt-8 ml-8'>
-              <div className='px-10'>
-                <p className='text-gray-400 whitespace-nowrap '>Organization</p>
-              </div>
-              <div className='text-2xl font-medium py-5 px-10'>
-                <p className='text-gray-600'>
-                  Lorem ipsum
-                  <span className='text-pink-600'>organizatioon</span>
-                  dor sit epsilon.
-                </p>
-              </div>
-
-              <div className='text-xl font-normal px-10 text-gray-400 pb-10'>
-                <p className='text-gray-400'>
-                  <span className='text-gray-600'> Easily organize </span> all
-                  of lorem dolor sit amet, consectetur
-                </p>
-                <p className='whitespace-nowrap'>
-                  adipiscing elit, sed do eiusmod tempor incididunt ut
-                </p>
-                <p className='whitespace-nowrap'>labore et dolore magna. </p>
-              </div>
-              <img
-                className='w-screen shadow rounded h-auto align-middle border-none px-0 mt-20 pb-1'
-                src='/carousel-image-2.png'
-                alt='image'
-              />
-            </div>
-
-            {/* SLIDE 3 */}
-            <div className='bg-white rounded-lg px-2 pt-8 ml-20 '>
-              <div className='px-10'>
-                <p className='text-gray-400 whitespace-nowrap '>Lorem</p>
-              </div>
-              <div className='text-2xl font-medium py-5 px-10'>
-                <p className='text-gray-600'>
-                  Lorem <span className='text-pink-600'>all of your file</span>
-                  management on PicLab ipsum.
-                </p>
-              </div>
-
-              <div className='text-xl font-normal px-10 text-gray-400 pb-10'>
-                <p className='text-gray-400'>
-                  <span className='text-gray-600'> No more need to </span> lorem
-                  ipsum dolor sit amet,
-                </p>
-                <p className='whitespace-nowrap'>
-                  consectetur adipiscing elit, sed do eiusmod tempor
-                </p>
-                <p className='whitespace-nowrap'>
-                  incididunt ut labore et dolore magna.
-                </p>
-              </div>
-              <img
-                className='w-auto shadow rounded h-auto align-middle border-none px-0 mt-20 pb-1.5'
-                src='/carousel-image-3.png'
-                alt='image'
-              />
-            </div>
-          </Slider>
-        </div>
-
-        {/* SECTION FOUR - NEWS */}
-        <div className='relative grid grid-cols-2 w-full bg-gradient-to-r from-black to-blue-900 py-36 -mt-32'>
-          {/* Background Image. */}
-          <Image
-            src='/asset3.png'
-            alt='Background picture for news section.'
-            layout='fill'
-            objectFit='cover'
-          />
-          <div className='ml-10 px-44'>
-            <h1 className='my-20 text-3xl'>
-              <span className=' font-bold pr-2'>News</span>lorem at PicLab
-            </h1>
-
-            <div className='flex'>
-              <p className='text-gray-400 mr-10'>
-                {RichText.asText(homepage.data.newsdate1)}
-              </p>
-              <div className='no-flex'>
-                <Link href='#' >
-                  <a className='underline'>{RichText.asText(homepage.data.news1)}</a>
-                </Link>
-              </div>
-            </div>
-            <hr className='w-100 h-0 my-10 bg-gray-400' />
-            <div className='flex'>
-            <p className='text-gray-400 mr-14'>
-                {RichText.asText(homepage.data.newsdate2)}
-              </p>
-              <div className='no-flex'>
-              <Link href='#' >
-                  <a className='underline'>{RichText.asText(homepage.data.news2)}</a>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* PicLab logo. */}
-          <div className='flex ml-72 mt-20'>
-            <div className='static right-10  border-8 w-0 h-64  mx-5 mt-20 bg-white-100 z-2 '></div>
-            <div className='sticky right-10 z-5 border-8 w-0 h-24 mx-5 mt-20 bg-white-100 z-2 '></div>
-            <div className='static right-10 border-8 w-0 h-64 mx-5 -mt-20 bg-white-100'></div>
-          </div>
-        </div>
-
-        {/* SECTION FIVE - FOOTER */}
-        <div className='relative h-96 py-96 '>
-          {/* Background Image. */}
-          <Image
-            src='/footer-bg.png'
-            alt='Footer background image'
-            layout='fill'
-            objectFit='cover'
-          />
-          <div className='relative z-2 bg-black h-96 py-96 -my-96 flex justify-center bg-opacity-80 mx-50'>
-            <div className='no-flex -mt-36'>
-              <div className='text-2xl align-items-center'>
-                <h1 className='m-auto text-2xl justify-center flex flex-nowrap '>
-                  Let's get started lorem
-                </h1>
-                <h1 className='text-2xl font-Inter justify-center flex flex-nowrap '>
-                  ipsum with<span className='font-bold px-2'>PicLab</span>
-                </h1>
-              </div>
-              <div className='text-black bg-white w-full mt-10 rounded'>
-                <form action='#' method='post'>
-                  <div className='flex border-2 rounded-lg px-6'>
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      size='lg'
-                      color='#d1d1d1'
-                      className='mt-2.5'
-                    />
-                    <input
-                      type='email'
-                      name='client-email'
-                      id='client-email'
-                      className='p-2'
-                      placeholder='Enter email'
-                    />
-
-                    <button
-                      type='submit'
-                      className='whitespace-nowrap text-pink-600'
-                    >
-                      |<span className='pl-8'>Request Beta</span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
       <footer className='bg-gradient-to-r from-primary to-secondary h-72 w-full'></footer>
     </div>
