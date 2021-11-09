@@ -106,31 +106,6 @@ export default function Home({ homepage }) {
                 className='drop-shadow-2xl'
               />
             </span>
-            <span className='absolute sm:top-20 sm:right-96 mr-20 sm:mt-10 -mt-10'>
-              <button
-                disabled='disabled'
-                className='border-2 py-1 px-2 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400 text-xs'
-              >
-                <span className='pr-1 text-gray-400'>#</span> Person
-              </button>
-            </span>
-            <span className='absolute sm:top-16 sm:right-36 sm:mt-10 right-0 -mt-10'>
-              <button
-                disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gray-800 text-xs'
-              >
-                <span className='pr-2 text-gray-400'>#</span> Pencils
-              </button>
-            </span>
-            <span className='absolute sm:top-44 right-0 mt-10'>
-              <button
-                disabled='disabled'
-                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
-              >
-                <span className='pr-1 text-gray-400'>#</span> Scenary
-              </button>
-            </span>
-
             <span className='absolute sm:top-40 sm:right-56 sm:mt-0 top-96 right-8 mt-28 '>
               <Image
                 src='/hero2.png'
@@ -149,21 +124,46 @@ export default function Home({ homepage }) {
                 className='drop-shadow-2xl'
               />
             </span>
+            <span className='absolute sm:top-20 sm:right-96 mr-20 sm:mt-10 -mt-10'>
+              <button
+                disabled='disabled'
+                className='border py-0.5 px-2 border-white rounded-full bg-gradient-to-r from-gray-600 to-gray-400 text-xs'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Person
+              </button>
+            </span>
+            <span className='absolute sm:top-16 sm:right-36 sm:mt-10 right-0 -mt-10'>
+              <button
+                disabled='disabled'
+                className='border py-0.5 px-3 border-white rounded-full bg-gray-800 text-xs'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Pencils
+              </button>
+            </span>
+            <span className='absolute sm:top-44 right-0 mt-10'>
+              <button
+                disabled='disabled'
+                className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
+              >
+                <span className='pr-1 text-gray-400'>#</span> Scenary
+              </button>
+            </span>
+
             <span className='absolute sm:top-96 sm:right-48 sm:mt-16 right-16 top-96 mt-60 md:mt-8 md:right-44'>
               <button
                 disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900 text-xs'
+                className='border py-0.5 px-3 border-white rounded-full bg-gradient-to-r from-blue-800 via-gray-400 to-blue-900 text-xs'
               >
-                <span className='pr-2 text-gray-400'>#</span> Water
+                <span className='pr-1 text-gray-400'>#</span> Water
               </button>
             </span>
 
             <span className='absolute sm:top-96 sm:mt-5 sm:ml-44 sm:left-96 bottom-0 left-28'>
               <button
                 disabled='disabled'
-                className='border-2 py-1 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600 text-xs'
+                className='border py-0.5 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600 text-xs'
               >
-                <span className='pr-2 text-gray-400'>#</span> Desk
+                <span className='pr-1 text-gray-400'>#</span> Desk
               </button>
             </span>
           </div>
@@ -220,7 +220,7 @@ export default function Home({ homepage }) {
             <span className='absolute sm:top-48 mt-10 left-0'>
               <button
                 disabled='disabled'
-                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+                className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
               >
                 <span className='pr-1 text-gray-400'>#</span> Pencils
               </button>
@@ -228,7 +228,7 @@ export default function Home({ homepage }) {
             <span className='absolute sm:top-44 sm:left-72 left-40'>
               <button
                 disabled='disabled'
-                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+                className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
               >
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
@@ -236,7 +236,7 @@ export default function Home({ homepage }) {
             <span className='absolute sm:top-64 left-20 top-40 sm:ml-28'>
               <button
                 disabled='disabled'
-                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+                className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
               >
                 <span className='pr-1 text-gray-400'>#</span> Desk
               </button>
@@ -244,7 +244,7 @@ export default function Home({ homepage }) {
             <span className='absolute sm:top-64 sm:left-96 top-40 sm:ml-10 left-60 md:ml-0'>
               <button
                 disabled='disabled'
-                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+                className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
               >
                 <span className='pr-1 text-gray-400'>#</span> Pencils
               </button>
@@ -252,7 +252,7 @@ export default function Home({ homepage }) {
             <span className='absolute sm:top-64 top-20 left-10 mt-36'>
               <button
                 disabled='disabled'
-                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+                className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
               >
                 <span className='pr-1 text-gray-400'>#</span> Person
               </button>
@@ -260,7 +260,7 @@ export default function Home({ homepage }) {
             <span className='absolute sm:top-64 sm:left-96 mt-36 sm:ml-36 top-20 left-64 md:ml-10'>
               <button
                 disabled='disabled'
-                className='border-2 py-0.5 px-2 border-white rounded-full bg-gray-800 text-sm'
+                className='border py-0.5 px-2 border-white rounded-full bg-gray-800 text-xs'
               >
                 <span className='pr-1 text-gray-400'>#</span> Scenary
               </button>
