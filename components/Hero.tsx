@@ -73,7 +73,7 @@ const Hero = () => {
           />
         </span>
 
-        <span className='absolute sm:top-72 sm:left-96 sm:ml-10 sm:mt-24 top-96 mt-52 left-0 '>
+        <span className='absolute sm:top-72 xl:left-80 xl:ml-96 sm:left-96 sm:ml-10 sm:mt-24 top-96 mt-52  '>
           <Image
             src='/hero3.png'
             alt='image'
@@ -115,11 +115,10 @@ const Hero = () => {
             <span className='pr-1 text-gray-400'>#</span> Water
           </button>
         </span>
-
-        <span className='absolute sm:top-96 sm:mt-5 sm:ml-44 sm:left-96 bottom-0 left-28'>
+        <span className='absolute sm:top-96 sm:right-96 right-28 mr-16 sm:mt-10 mt-24'>
           <button
             disabled
-            className='border py-0.5 px-3 border-white rounded-full bg-gradient-to-r from-white to-gray-600 text-xs'
+            className='border py-0.5 px-2 border-white rounded-full bg-gradient-to-r from-white to-gray-600 text-xs'
           >
             <span className='pr-1 text-gray-400'>#</span> Desk
           </button>

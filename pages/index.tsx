@@ -15,7 +15,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import RequestBeta from '../components/RequestBeta';
-import Carousel from '../components/Slider';
+import Cards from '../components/Cards';
 import Footer from '../components/Footer';
 
 export default function Home({ homepage }) {
@@ -109,7 +109,7 @@ export default function Home({ homepage }) {
           </div>
         </div>
 
-        <Carousel />
+        <Cards />
 
         {/* NEWS SECTION*/}
         <div className='relative grid sm:grid-cols-2 grid-cols-1 w-full bg-gradient-to-r from-black to-blue-900 sm:py-36 sm:-mt-32'>
