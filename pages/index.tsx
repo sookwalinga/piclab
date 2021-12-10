@@ -20,7 +20,7 @@ import Footer from '../components/Footer';
 
 export default function Home({ homepage }) {
   return (
-    <div className='font-Inter text-white'>
+    <div className='font-Inter text-white overflow-x-hidden'>
       <Header />
 
       <main className=' bg-gradient-to-b from-primary via-blue-900 to-secondary'>
