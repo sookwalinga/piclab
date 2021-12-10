@@ -43,7 +43,5 @@ https://cloud.typography.com/6929016/6791232/css/fonts.css
 Here is the JS URL for FontAwesome:
 https://kit.fontawesome.com/117bcfe378.js
 
-NB: Please complete by November 5th by 11am EST.
-
 ### MOCKUPS
 https://www.figma.com/file/oLfcvrrm9KnZFygdhlnJQL/PicLab-Design?node-id=0%3A1
